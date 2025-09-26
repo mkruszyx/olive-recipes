@@ -1,7 +1,7 @@
 {
     "input_model": {
         "type": "HfModel",
-        "model_path": "openai/clip-vit-base-patch16".
+        "model_path": "openai/clip-vit-base-patch16",
         "task": "zero-shot-image-classification",
         "load_kwargs": {
             "attn_implementation": "eager"
