@@ -1,7 +1,8 @@
 {
     "input_model": {
         "type": "HfModel",
-        "model_path": "laion/CLIP-ViT-B-32-laion2B-s34B-b79K"
+        "model_path": "laion/CLIP-ViT-B-32-laion2B-s34B-b79K",
+        "task": "zero-shot-image-classification"
     },
     "systems": {
         "local_system": {
