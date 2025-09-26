@@ -1,7 +1,63 @@
 {
     "input_model": {
         "type": "HfModel",
-        "model_path": "openai/clip-vit-base-patch16"
+        "model_path": "openai/clip-vit-base-patch16".
+        "task": "zero-shot-image-classification",
+        "load_kwargs": {
+            "attn_implementation": "eager"
+        },
+        "io_config": {
+            "input_names": [
+                "input_ids",
+                "pixel_values",
+                "attention_mask"
+            ],
+            "input_shapes": [
+                [
+                    10,
+                    77
+                ],
+                [
+                    1,
+                    3,
+                    224,
+                    224
+                ],
+                [
+                    10,
+                    77
+                ]
+            ],
+            "input_types": [
+                "int64",
+                "float32",
+                "int64"
+            ],
+            "output_names": [
+                "logits_per_image",
+                "logits_per_text",
+                "text_embeds",
+                "image_embeds"
+            ],
+            "output_shapes": [
+                [
+                    1,
+                    10
+                ],
+                [
+                    10,
+                    1
+                ],
+                [
+                    10,
+                    512
+                ],
+                [
+                    1,
+                    512
+                ]
+            ]
+        }
     },
     "systems": {
         "local_system": {
